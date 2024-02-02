@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="./styles/dashboard.css">
+    <!-- Add any additional CSS links or stylesheets here -->
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">GraphQL</div>
+        <div class="nav-title">
+            WELCOME
+        </div>
+        <div class="logout">
+            <img src="./assests/7124045_logout_icon.png" alt="logOut">
+        </div>
+    </nav>
+    <div class="userInfo">
+        <div class="userInfo-leftSide">
+            <p>Username : <span id="username"></span></p>
+            <p>Full Name : <span id="fullName"></span></p>
+            <p>Email : <span id="email"></span></p>
+            <p>Campus : <span id="campus"></span></p>
+        </div>
+        <div class="userInfo-rightSide">
+            <div class="level">
+                <div class="level-value">
+
+                </div>
+                <div>
+                    LEVEL
+                </div>
+            </div>
+            <div class="xp">
+                <div class="xp-value">
+                    <span class="xp-value-span">Kb</span>
+                </div>
+                <div>
+                    Xp Earned
+                </div>
+
+            </div>
+            <div class="project-done">
+                <div class="project-done-value">
+                    <span class="project-done-value-span"></span>
+                </div>
+                <div>
+                    Projects Done
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+    <div class="graph1">
+        <svg id="xpOfUser" width="500" height="400" class="glasmorphis">
+        </svg>
+        <svg id="ratio" width="400" height="400" class="glasmorphis">
+        </svg>
+    </div>
+    </svg>
+    <script src="./scripts/dashboard.js" type="module"></script>
+    <script src="./scripts/graphs.js" type="module"></script>
+</body>
+
+</html>

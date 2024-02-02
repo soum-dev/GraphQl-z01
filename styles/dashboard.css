@@ -1,0 +1,125 @@
+body{
+    margin: 0%;
+    width: 100%;
+    height: auto;
+    display:inline;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(53,0,113,1) 50%, rgba(3,76,91,1) 100%);
+    min-width: 300px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.userInfo{
+    width: 100%;
+}
+
+.navbar{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    color:dark;
+    background-color: none;
+
+}
+
+.logo{
+    width: 20%;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-size: large;
+    font-weight: 900;
+    background-color: aliceblue;
+    border-radius: 10px;
+}
+.nav-title{
+    width: auto;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-size: large;
+    font-weight: 900;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: aliceblue;
+    border-radius: 10px;
+    padding: 5px;
+}
+.userInfo{
+    margin-top: 5%;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    background-color: aliceblue;
+}
+
+.userInfo-leftSide{
+    width: auto;
+    font-weight: 900;
+    font-size: 17px;
+}
+.userInfo-rightSide{
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.userInfo-rightSide .level .level-value{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-size: 50px;
+    font-weight: 900;
+}
+
+.logout{
+    width: 5%;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-size: 10px;
+    background-color: aliceblue;
+    border-radius: 10px;
+}
+img{
+    width: auto;
+    height: 100%;
+}
+
+.xp-value{
+    font-size: 50px;
+    font-weight: 900;
+}
+
+
+.project-done-value-span{
+    font-size: 50px;
+    font-weight: 900;
+}
+
+.graph1{
+    height: auto;
+    margin-top: 5%;
+    width: 100%;
+    background-color: aliceblue;
+    display: flex;
+    justify-content: space-around;
+}
+
+.barre {
+    fill: #4d4d4d;
+    transition: fill 0.3s ease;
+}
+
+.barre:hover {
+    fill:burlywood;
+}
+
+.glasmorphism:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
