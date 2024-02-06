@@ -72,32 +72,36 @@ async function testQuery() {
     const username = document.querySelector("#username");
     const fullName = document.querySelector("#fullName");
     const email = document.querySelector("#email");
-    const campus = document.querySelector("#campus");
-    const level = document.querySelector(".level-value");
-    const xp = document.querySelector(".xp-value");
-    const progress = document.querySelector(".project-done-value-span");
+    
     navTitle.textContent +=
-      data.data.user[0].firstName + " " + data.data.user[0].lastName;
+    data.data.user[0].firstName + " " + data.data.user[0].lastName;
     username.textContent += data.data.user[0].login;
     fullName.textContent +=
-      data.data.user[0].firstName + " " + data.data.user[0].lastName;
+    data.data.user[0].firstName + " " + data.data.user[0].lastName;
     email.textContent += data.data.user[0].email;
-    campus.textContent += data.data.user[0].campus;
-    level.textContent += data.data.user[0].events[0].level;
+    
+    if (data.data.user[0].campus!==null) {
+      const campus = document.querySelector("#campus");
+      const level = document.querySelector(".level-value");
+      const xp = document.querySelector(".xp-value");
+      const progress = document.querySelector(".project-done-value-span");
+      campus.textContent += data.data.user[0].campus;
+      level.textContent += data.data.user[0].events[0].level;
     xp.textContent =
-      Math.floor(
+    Math.floor(
         data.data.user[0].transactions_aggregate.aggregate.sum.amount / 1000
-      ) + xp.textContent;
-      progress.textContent = data.data.user[0].transactions.length
-    console.log(data.data.user);
-    console.log(data.data.user[0].firstName, data.data.user[0].lastName);
-    generateBarChart(data.data.user[0].transactions)
+        ) + xp.textContent;
+        progress.textContent = data.data.user[0].transactions.length
+        console.log(data.data.user);
+        console.log(data.data.user[0].firstName, data.data.user[0].lastName);
+        generateBarChart(data.data.user[0].transactions)
     const totalValueOfCircleGraph=data.data.user[0].totalUp+data.data.user[0].totalDown
     const valueOfCircleGraph=[
       {label:"Done",value:(data.data.user[0].totalUp/totalValueOfCircleGraph)*100,color:"#2e9a28"},
       {label:"Received",value:(data.data.user[0].totalDown/totalValueOfCircleGraph)*100,color:"#b41414"}
     ]
     circularGraph(valueOfCircleGraph)
+    }
   } catch (error) {
     console.error("Query failed:", error.message);
   }

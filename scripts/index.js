@@ -19,17 +19,6 @@ eField = form.querySelector(".email"),
             alert(passwordValidationResponse.message);
         } else {
             // Continue with your existing code for form submission
-            (eInput.value == "") ? eField.classList.add("shake", "error"): checkEmail();
-            (pInput.value == "") ? pField.classList.add("shake", "error"): checkPass();
-    
-            setTimeout(() => {
-                eField.classList.remove("shake");
-                pField.classList.remove("shake");
-            }, 500);
-    
-            eInput.onkeyup = () => { checkEmail(); }
-            pInput.onkeyup = () => { checkPass(); }
-    
             if (!eField.classList.contains("error") && !pField.classList.contains("error")) {
                 window.location.href = form.getAttribute("action");
             }
