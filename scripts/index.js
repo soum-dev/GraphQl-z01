@@ -67,7 +67,6 @@ async function login(username, password) {
             },
             body: JSON.stringify({ username, password }),
         });
-        console.log(response);
         if (!response.ok) {
             throw new Error(`Error: ${response.status} - ${response.statusText}`);
         }
@@ -75,14 +74,10 @@ async function login(username, password) {
         // Handle the successful response here (e.g., return a parsed JSON or perform additional actions)
         const data = await response.json();
         localStorage.setItem('Token', data);
-        console.log(data);
         RenderDashboard()
         return true;
     } catch (error) {
-        console.error('Login failed:', error.message);
-
         return false;
-        // Handle the error (e.g., show an error message to the user)
     }
 }
 

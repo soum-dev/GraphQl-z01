@@ -2,7 +2,6 @@ import { circularGraph, generateBarChart } from "./graphs.js";
 if (localStorage.getItem("Token") === null) {
   window.location.href = "index.html";
 }
-console.log(localStorage.getItem("Token") === null);
 
 document.querySelector('.logout').addEventListener('click',()=>{
   localStorage.clear()
@@ -10,7 +9,6 @@ document.querySelector('.logout').addEventListener('click',()=>{
 })
 
 async function testQuery() {
-  console.log(localStorage.getItem("Token"));
 
   const getUserQuery = () => `
         query {
@@ -91,9 +89,7 @@ async function testQuery() {
     Math.floor(
         data.data.user[0].transactions_aggregate.aggregate.sum.amount / 1000
         ) + xp.textContent;
-        progress.textContent = data.data.user[0].transactions.length
-        console.log(data.data.user);
-        console.log(data.data.user[0].firstName, data.data.user[0].lastName);
+        progress.textContent = data.data.user[0].transactions.length;
         generateBarChart(data.data.user[0].transactions)
     const totalValueOfCircleGraph=data.data.user[0].totalUp+data.data.user[0].totalDown
     const valueOfCircleGraph=[
