@@ -14,9 +14,8 @@ eField = form.querySelector(".email"),
         const passwordValidationResponse = await validatePasswordOnServer(eInput.value,pInput.value);
     
         if (passwordValidationResponse.error) {
-            // Display the server-side error message
-            // You may want to adjust this part based on your HTML structure
-            alert(passwordValidationResponse.message);
+            document.querySelector('.error-message').innerHTML = passwordValidationResponse.message;
+            document.querySelector('.error-message').style.display='inline'
         } else {
             // Continue with your existing code for form submission
             if (!eField.classList.contains("error") && !pField.classList.contains("error")) {

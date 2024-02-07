@@ -16,11 +16,6 @@ body {
     min-width: 300px;
 }
 
-.dashboard{
-    
-}
-
-
 .wrapper {
     width: 30%;
     padding: 40px 30px 50px 30px;
@@ -48,22 +43,6 @@ form .field {
 form .field.shake {
     animation: shake 0.3s ease-in-out;
 }
-
-@keyframes shake {
-    0%,
-    100% {
-        margin-left: 0px;
-    }
-    20%,
-    80% {
-        margin-left: -12px;
-    }
-    40%,
-    60% {
-        margin-left: 12px;
-    }
-}
-
 form .field .input-area {
     height: 50px;
     width: 100%;
@@ -89,10 +68,6 @@ form .field.valid input {
     border-color: #5372F0;
 }
 
-form .field.shake input,
-form .field.error input {
-    border-color: #dc3545;
-}
 
 .field .input-area i {
     position: absolute;
@@ -118,10 +93,6 @@ form .field.valid .icon {
     color: #5372F0;
 }
 
-form .field.shake input:focus~.icon,
-form .field.error input:focus~.icon {
-    color: #bfbfbf;
-}
 
 form input::placeholder {
     color: #bfbfbf;
@@ -138,10 +109,6 @@ form .field .error {
     display: none;
 }
 
-form .field.shake .error,
-form .field.error .error {
-    display: block;
-}
 
 form .pass-txt {
     text-align: left;
@@ -171,4 +138,11 @@ form input[type="submit"] {
 
 form input[type="submit"]:hover {
     background: #2c52ed;
+}
+
+.error-message {
+    color: #dc3545;
+    text-align: center;
+    margin-top: 5px;
+    display: none;
 }
